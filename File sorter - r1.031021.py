@@ -35,6 +35,27 @@ def photo(file, path):
         else:
             pass
 
+def video(file, path):
+    ext = -1
+    videos = [".mp4", ".webm", ".mkv", ".gif", "wmv", ".amv", ".vpg", "m4p", ".mpg"]
+    for x in videos:
+        ext = ext + 1
+        extension = videos[ext]
+        if extension in file:
+            destination = path + "\\sorted files\\videos"
+            vidpath = path + "\\" + file
+            try:
+                os.makedirs(path + "\\sorted files\\videos")
+                shutil.copy2(vidpath, destination)
+                os.remove(vidpath)
+            except FileExistsError:
+                shutil.copy2(vidpath, destination)
+                os.remove(vidpath)
+            
+        else:
+            pass
+
+
 def main(sortpath): 
     #filesetup()
     documents = [".docx", ".txt", ".pdf"]
@@ -47,6 +68,7 @@ def main(sortpath):
         numberoffile = numberoffile + 1
         file = names[numberoffile]
         photo(file, sortpath)
+        video(file, sortpath)
         print("Sorted file: ",numberoffile,"/",totalfiles)
     print("All files sorted. Thank me later ;)")
 
