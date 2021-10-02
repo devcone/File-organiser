@@ -1,0 +1,24 @@
+File sorter roadmap
+All releases will include fixing any bugs given the previous day
+30th sept
+Update documentation with use cases and pictures, add roadmap doc – work on new menu UI but not push release yet
+1st oct
+Push UI release (UI will not be functional) and get working on sorting video files
+2nd oct
+Release function to sort video files and update docs with UI picture
+3rd oct
+Work on adding comments to avoid confusion and push it
+4th oct
+Work on sorting audio files and releasing it
+5th oct
+Work on being able to sort documents and releasing it
+6th oct
+Release very first functioning release
+7th oct
+Work on and add a feature to sort python projects
+8th oct
+Find and code an easier way to check if the file exists and if not, make one. Current state is handling the “FileExistsError” using a try except statement
+
+9th oct
+
+
